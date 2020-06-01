@@ -660,6 +660,9 @@ class agGallery extends agHelper {
      */
     function readInlineParams() {
         ////setting parametars for current gallery, if there is no inline params default params are set
+        
+        $this->params['rootFolder'] = $this->ag_getParams("rootFolder", $this->match, $this->staticParams['rootFolder']);
+
         $this->params['template'] = $this->ag_getParams("template", $this->match, $this->staticParams['template']);
         $this->params['thumbWidth'] = $this->ag_getParams("thumbWidth", $this->match, $this->staticParams['thumbWidth']);
         $this->params['thumbHeight'] = $this->ag_getParams("thumbHeight", $this->match, $this->staticParams['thumbHeight']);
